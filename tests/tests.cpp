@@ -79,18 +79,18 @@ TEST_F(CalcTest, TestMul)
 {
     EXPECT_EQ(calc->Multiply(455, 565), 257075);
     EXPECT_EQ(calc->Multiply(999, 0), 0);
-    EXPECT_EQ(calc->Multiply(0, 999), -0);
+    EXPECT_EQ(calc->Multiply(0, 999), 0);
     EXPECT_EQ(calc->Multiply(0, 0), 0);
 }
 
 TEST_F(CalcTest, TestDivide)
 {
-    EXPECT_EQ(calc->Divide(455, 565), -0);
+    EXPECT_EQ(calc->Divide(455, 565), 0);
     EXPECT_EQ(calc->Divide(999, 1), 999);
     EXPECT_EQ(calc->Divide(52, -6), -8);
     EXPECT_EQ(calc->Divide(-52, 6), -8);
     EXPECT_EQ(calc->Divide(-52, -6), 8);
-    EXPECT_EQ(calc->Divide(0, 999), -0);
+    EXPECT_EQ(calc->Divide(0, 999), 0);
 }
 
 TEST_F(CalcTest, TestDivideZero)
