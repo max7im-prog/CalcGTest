@@ -29,7 +29,10 @@ target_include_directories(unit_tests PRIVATE ${CMAKE_SOURCE_DIR})
 
 
 target_link_libraries(unit_tests
-        PRIVATE CalcLib GTest::gtest_main
+        PRIVATE 
+        CalcLib 
+        GTest::gtest_main
+        GTest::gmock
 )
 
 include(GoogleTest)
