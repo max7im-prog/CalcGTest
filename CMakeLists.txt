@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(CalcLib ICalculator.h SimpleCalculator.h SimpleCalculator.cpp
                     IHistory.h InMemoryHistory.h InMemoryHistory.cpp)
-target_compile_options(CalcLib PRIVATE -coverage)
-target_link_options(CalcLib PRIVATE -coverage)
+target_compile_options(CalcLib PRIVATE --coverage)
+target_link_options(CalcLib PRIVATE --coverage)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -21,8 +21,8 @@ enable_testing()
 
 add_executable(unit_tests tests/tests.cpp)
 
-target_compile_options(unit_tests PRIVATE -coverage)
-target_link_options(unit_tests PRIVATE -coverage)
+target_compile_options(unit_tests PRIVATE --coverage)
+target_link_options(unit_tests PRIVATE --coverage)
 
 target_include_directories(unit_tests PRIVATE ${CMAKE_SOURCE_DIR})
 
